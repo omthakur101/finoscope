@@ -1,3 +1,7 @@
+## 🎥 Product Demo
+
+[▶️ Watch the FinOScope Demo on YouTube](https://youtu.be/El3VM1m0r60)
+
 # FinOScope
 
 FinOScope is an AI-ready financial risk and market intelligence MVP. It demonstrates portfolio analytics, risk measurement, anomaly detection, systematic backtesting, a REST API, automated tests, and a browser dashboard.
@@ -10,9 +14,7 @@ FinOScope is an AI-ready financial risk and market intelligence MVP. It demonstr
 - Momentum strategy backtesting
 - Responsive browser dashboard
 - Automated pytest tests
-- No paid API keys required: deterministic demo market data is used
 
-## Run locally
 
 ### macOS / Linux
 ```bash
@@ -23,10 +25,8 @@ pytest -q
 uvicorn app:app --reload
 ```
 
-Open http://127.0.0.1:8000
-
 ## Important
-The market data included in this MVP is synthetic/deterministic demo data. It is intentionally labeled as such. A production version should use a licensed real-time/historical market-data provider and should add authentication, persistent storage, monitoring, rate limiting, and production deployment.
+The market data included in this MVP is synthetic/deterministic demo data. It is intentionally labeled as such. 
 
 ## Architecture
 Browser → FastAPI → Analytics/Risk/ML services → data provider/database.
