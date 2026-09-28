@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FinOScope</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+<header><div><h1>FinOScope</h1><p>AI-ready financial risk & market intelligence platform</p></div><span class="pill">MVP • Demo Data</span></header>
+<main>
+<section class="hero"><div><h2>Portfolio Intelligence</h2><p>Analyze risk, detect unusual market behavior, and backtest a systematic strategy.</p></div><button onclick="loadAll()">Refresh Analysis</button></section>
+<section class="grid" id="market"></section>
+<section class="panel"><h2>Portfolio</h2><div class="holdings">
+<label>AAPL shares <input id="aapl" type="number" value="20" min="0"></label>
+<label>MSFT shares <input id="msft" type="number" value="10" min="0"></label>
+<label>NVDA shares <input id="nvda" type="number" value="8" min="0"></label>
+<label>SPY shares <input id="spy" type="number" value="15" min="0"></label>
+<button onclick="analyze()">Analyze Portfolio</button></div>
+<div class="metrics" id="metrics"></div></section>
+<section class="two"><div class="panel"><h2>Anomaly Detection</h2><select id="ticker"><option>AAPL</option><option>MSFT</option><option>NVDA</option><option>AMZN</option><option>GOOGL</option><option>SPY</option></select><button onclick="findAnomalies()">Scan</button><div id="anomalies"></div></div>
+<div class="panel"><h2>Strategy Backtest</h2><select id="backticker"><option>SPY</option><option>AAPL</option><option>MSFT</option><option>NVDA</option></select><button onclick="backtest()">Run Backtest</button><div id="backtest"></div></div></section>
+<section class="panel"><h2>Architecture</h2><div class="architecture">Data → Analytics Engine → Risk Engine → ML Detection → REST API → Dashboard</div><p class="note">This MVP uses deterministic demo market data so it runs without paid APIs. The architecture is designed so a real market-data provider can replace the demo provider.</p></section>
+</main>
+<script src="/static/app.js"></script>
+</body></html>
